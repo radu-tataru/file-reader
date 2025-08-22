@@ -1,19 +1,16 @@
-# WebsiteLauncher
+readme_content = """# WebsiteLauncher Java Project
 
-## Overview
-This Java project demonstrates the use of interfaces, inheritance, and polymorphism. It reads website URLs from different file formats and opens them in Chrome.
+## 🚀 Project Overview
 
-## Structure
-- `FileReader` interface
-- `TxtFileReader` and `CsvFileReader` classes implementing `FileReader`
-- `WebsiteOpener` class to launch websites
-- `Main` class to run the application
+WebsiteLauncher is a simple Java application designed to help students learn key object-oriented programming concepts including:
 
-## Usage
-1. Set the `fileType` in `Main.java` to either `"txt"` or `"csv"`.
-2. Run the `Main` class.
-3. Websites listed in the corresponding file will open in Chrome.
+- **Interfaces**
+- **Inheritance**
+- **Polymorphism**
+- **Singleton Pattern**
+- **Factory Method Pattern**
+- **Unit Testing with JUnit 5**
+- **Behavior-Driven Development with Cucumber**
 
-## Requirements
-- Java 8 or higher
-- Chrome browser installed
+The application reads website URLs from various file formats and opens them in Chrome. It supports `.txt`, `.csv`, and `.json` formats and is easily extensible.
+
