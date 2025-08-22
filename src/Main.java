@@ -1,25 +1,13 @@
-import java.util.List;
-
 public class Main {
     public static void main(String[] args) {
-        String fileType = "txt"; // Change to "csv" to test CsvFileReader
-        String filePath = "resources/websites." + fileType;
+        String fileType = "json"; // Change to "txt" or "csv" to test other readers
+        String filePath = "data/websites." + fileType;
 
-        FileReader reader;
+        FileReader reader = FileReaderFactory.createReader(fileType);
+        WebsiteOpener opener = WebsiteOpener.getInstance();
 
-        if (fileType.equals("txt")) {
-            reader = new TxtFileReader();
-        } else if (fileType.equals("csv")) {
-            reader = new CsvFileReader();
-        } else {
-            System.out.println("Unsupported file type.");
-            return;
-        }
-
-        List<String> websites = reader.readWebsites(filePath);
-        WebsiteOpener websiteOpener =  WebsiteOpener.getInstance();
-        for (String site : websites) {
-            websiteOpener.openWebsite(site);
+        for (String site : reader.readWebsites(filePath)) {
+            opener.openWebsite(site);
         }
     }
 }

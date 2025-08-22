@@ -3,6 +3,7 @@ public class FileReaderFactory {
         return switch (fileType.toLowerCase()) {
             case "txt" -> new TxtFileReader();
             case "csv" -> new CsvFileReader();
+            case "json" -> new JsonFileReader();
             default -> throw new IllegalArgumentException("Unsupported file type: " + fileType);
         };
     }
