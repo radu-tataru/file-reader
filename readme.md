@@ -1,5 +1,3 @@
-readme_content = """# WebsiteLauncher Java Project
-
 ## 🚀 Project Overview
 
 WebsiteLauncher is a simple Java application designed to help students learn key object-oriented programming concepts including:
